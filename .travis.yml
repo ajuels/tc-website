@@ -1,31 +1,29 @@
 language: python
 cache: pip
-python: "2.7.10"
-
+python: 2.7.10
 install:
-    - pip install pelican
+- pip install pelican
 script:
-    - pelican content
+- pelican content
 before_deploy:
-    - chmod u+x compress.sh && ./compress.sh
+- chmod u+x compress.sh && ./compress.sh
 deploy:
   provider: s3
   access_key_id: AKIAJJUWMWYDBSKNLCDA
   secret_access_key:
-    secure: fmNXJR/QrHshEVOpcGnh+/rWk8ICyWUuXMjsMPls7tbpru2ghnPqeOFJ6UffPFNU9HvC+o0ock3B4B6JssVPL3fcV9uvlsZiztIFxNCL/qDQSRNJuhgt0pr3IxeW9+4B63OA+N+ykqAU0gu+mJoRWoTp+aXkqALS+iTaUzRJHVwOKs9rVD4QpMZ2NlyEf92Jn2cb2TBSeEQ4ZrRes0xcN8QPfB8X45Mdr76ocS+PKekxaVwTdmY8sWa1G/NNl28eBIYDXHMaiutvGF3WqbPLIfQ/wK/9U9J2RF5zexsed/sOf6ZmZjPTKKtVzJYyLLCcGOxeA/7WBxZqsqF6uZJGk+rOar4DBQAj930kJVJ7jpdW9bxEUXiiWf/woe/eEzL6SuW2Jg5J2vPJIU3Nce6g0f4xMZK8kMF32V/aAZskG031SgV/fCHind712AzGcOqdqy/Pycfr1IIyo6BzRoVL0F9D0f17BJq3QaNZEcYrZZBy0TtJ6vKHPiTthg5rdMWPukqrHLmah6Z9pDXOI1pgPfawhwoJbIp8H6oA5PcR/pPD+rqJXFnpjsjENYNNBWw6IY5mRkbeSDDrS7gTMO75+/8S1lM05GNYmaDNtuPeaAnN0fvVW/E4ZHb9y9h3HwyvyF9NUMvILvsWb1IxS+yvb9/VmLSNHPakDHXAj0/k4Fw=
+    secure: KFxfEjTG9KxrSUFgL8F6EMjmS/HO2SSwDAYRaiHJgc/Eu9RvI5orNv82S9qsEGXy45bMja8SHE1YJX9joU8EUNLyIhdTzroPcm2vGMBKBsotJoDmKEx0gd0VMaQZNSx1Z3OiC99sIM3ir+mh8BkAMVxzHVR84WK3zkoNX+UTAuKa50E5yA2eLgbhPluInG5ekmPgz/ckNMawem8GdllNm0evNlVirBiKkXP5FU3zciTQroeUFAlkC2iOki9mAsbl5ENpYAnNxfV0/vJ9oH9grTvet/QpiXnMKidaHvzaMFTv/3ZJB7uZWjnMYTXyONJl2tarTycIVY7E+Gv4FreBa3ZKLvuc+9V0+vgAq6ksOOAQNDRz60Z3YQptDy8cYNmsBcEv7f5QRejySQB+bYgfEm0rFHlz17zr8TtbqWY0Y4BeB8ohV88iAVoPBf2hgXHrTyT+fsLxv/1mP3plqM0KgHyspndgaGS0tvEiMtAmfXtYu7/QXmbbl9efOHzO8SlrLx9YAU/rDAcj2JUDjBBRKFj93d+n1kH/LOYmpvZW2auWXu5CrIziElBwDwtrxhwepHhUoanaRaiZwILQHygz1hoTKCWgzDZYxzoLrcdT1uTHDorEDqVsaZK4s0QwqnlSqh5xEjVcqXt763Psvl/1N8edSNtZm5bvyMSfHL7r7Zs=
   bucket: www.town-crier.org
   region: us-east-1
   skip_cleanup: true
-  default_text_charset: 'utf-8'
-  cache_control: "max-age=604800"
+  default_text_charset: utf-8
+  cache_control: max-age=604800
   local-dir: output
   detect_encoding: true
   on:
     branch: master
-
 notifications:
   email:
     recipients:
-      - fanz@linux.com
+    - fanz@linux.com
     on_success: always
     on_failure: always
