@@ -6,7 +6,7 @@ AUTHOR = u'Fan Zhang'
 SITENAME = u'Town Crier'
 SITEURL = ''
 
-THEME = './themes/pelican-semantic-ui'
+THEME = './themes/semantic-ui'
 
 PATH = 'content'
 
