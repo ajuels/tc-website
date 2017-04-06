@@ -5,7 +5,7 @@ python: "2.7.10"
 install:
     - pip install pelican
 script:
-    - python main.py -d
+    - pelican content
 before_deploy:
     - chmod u+x compress.sh && ./compress.sh
 deploy:
