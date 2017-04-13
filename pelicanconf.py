@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Fan Zhang'
 SITENAME = u'Town Crier'
-SITEURL = ''
+SITEURL = 'http://www.town-crier.org/staging/'
 
 THEME = './themes/semantic-ui'
 
