@@ -2,7 +2,7 @@ language: python
 cache: pip
 python: 2.7.10
 install:
-- pip install pelican
+- pip install pelican markdown
 script:
 - ls -la content && pelican content
 before_deploy:
