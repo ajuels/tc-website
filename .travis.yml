@@ -18,6 +18,7 @@ deploy:
   default_text_charset: utf-8
   cache_control: max-age=604800
   local-dir: output
+  upload-dir: staging
   detect_encoding: true
   on:
     branch: master
