@@ -35,3 +35,5 @@ MENU_LINKS = [
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+GOOGLE_ANALYTICS='UA-72748416-5'
