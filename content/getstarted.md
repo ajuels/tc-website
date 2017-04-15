@@ -108,7 +108,7 @@ Suppose Alice wanted to provide a flight insurance service by deploying a smart 
 ```
 
 [Town Crier: An Authenticated Data Feed for Smart Contracts]: https://eprint.iacr.org/2016/168.pdf
-[TownCrier.sol]:
+[TownCrier.sol]: https://github.com/bl4ck5un/Town-Crier/blob/master/Contracts/TownCrier.sol
 [Application.sol]:
 [FlightInsurance.sol]:
 
